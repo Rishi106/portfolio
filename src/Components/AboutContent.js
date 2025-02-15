@@ -9,7 +9,14 @@ const AboutContent = () => {
         <div className="left">
         <h1>Who Am I?</h1>
         <p>
-            I'm a full-stack java Developer. I create responsive secure website for my clients.
+        I'm Rishi, a Full-Stack Java Developer with a passion for building robust, 
+        scalable, and efficient web applications. With a strong foundation in Java,
+         Spring Boot, Hibernate, and RESTful APIs, I specialize in crafting high-performance back-end systems.
+          On the front-end, I bring ideas to life using modern technologies like React, JavaScript, 
+          and responsive design. Whether it's designing seamless user experiences, 
+          optimizing database performance, or deploying cloud-based solutions,
+           I thrive on solving complex problems and delivering end-to-end solutions.
+            Explore my projects, learn more about my skills, and let's collaborate to turn your vision into reality.
         </p>
         <Link to="/contect">
         <button className="btn">Contact</button>
