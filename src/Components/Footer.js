@@ -29,10 +29,17 @@ const Footer = () => {
                     this is my portfolio
                 </p>
                 <div className="social">
-                <FaFacebook size={40} style={{color: "https://www.facebook.com/rishikesh.gosvami.9/" , marginRight:"1rem"}}/>
-                <FaLinkedin size={40} style={{color: "https://www.linkedin.com/in/rishikesh-kr-7481jh/" , marginRight:"1rem"}}/>
-                <FaInstagram size={40} style={{color: "#https://www.instagram.com/rishikeshgosvami/?__pwa=1" , marginRight:"1rem"}}/>
-                </div>
+            
+  <a href="https://www.facebook.com/rishikesh.gosvami.9/" target="_blank" rel="noopener noreferrer">
+    <FaFacebook size={40} style={{ color: "#1877F2", marginRight: "1rem" }} />
+  </a>
+  <a href="https://www.linkedin.com/in/rishikesh-kr-7481jh/" target="_blank" rel="noopener noreferrer">
+    <FaLinkedin size={40} style={{ color: "#0A66C2", marginRight: "1rem" }} />
+  </a>
+  <a href="https://www.instagram.com/rishikeshgosvami/?__pwa=1" target="_blank" rel="noopener noreferrer">
+    <FaInstagram size={40} style={{ color: "#E4405F", marginRight: "1rem" }} />
+  </a>
+</div>
                 </div>
 
         </div>
