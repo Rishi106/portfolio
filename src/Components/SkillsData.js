@@ -5,16 +5,24 @@ import './SkillsDataStyle.css';
 
 const SkillsData = () => {
   const skills = [
+    { name: 'Java', level: 'Advanced' },
+    { name: 'Spring Boot', level: 'Advanced' },
+    { name: 'Microservices', level: 'Intermediate' },
+    { name: 'RESTful API', level: 'Advanced' },
     { name: 'HTML', level: 'Advanced' },
     { name: 'CSS', level: 'Advanced' },
     { name: 'JavaScript', level: 'Intermediate' },
     { name: 'React', level: 'Intermediate' },
-    { name: 'Java', level: 'Advanced' },
-    { name: 'RESTful API', level: 'Advanced' },
-    { name: 'Spring Boot', level: 'Intermediate' },
-    { name: 'Microservices', level: 'Intermediate' },
+    { name: 'Bootstrap', level: 'Intermediate' },
     { name: 'SQL', level: 'Intermediate' },
     { name: 'Git', level: 'Intermediate' },
+    { name: 'Postman', level: 'Intermediate' },
+    { name: 'JSM', level: 'Intermediate' },
+    { name: 'Kafka', level: 'Intermediate' },
+    {name: 'Spring Boot Radis', level: 'Intermediate' },
+    { name: 'MongoDB', level: 'Intermediate' },
+
+
   ];
 
   return (

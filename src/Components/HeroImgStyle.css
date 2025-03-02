@@ -6,6 +6,9 @@
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://your-image-url.com') no-repeat center center/cover;
     transition: background 0.5s ease-in-out;
   }
+  .hero:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://your-image-url.com') no-repeat center center/cover;
+  }
   
   .mask {
     width: 100%;
@@ -141,6 +144,21 @@
       opacity: 1;
     }
   }
+  @keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.content h1 {
+  animation: float 3s ease-in-out infinite;
+}
   
   @keyframes slideIn {
     from {
