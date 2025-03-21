@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Rishi106/portfolio_website/static/css/main.2c5e035d.css",
-    "main.js": "/Rishi106/portfolio_website/static/js/main.8cc05e5b.js",
+    "main.js": "/Rishi106/portfolio_website/static/js/main.ac259c5a.js",
     "index.html": "/Rishi106/portfolio_website/index.html",
     "main.2c5e035d.css.map": "/Rishi106/portfolio_website/static/css/main.2c5e035d.css.map",
-    "main.8cc05e5b.js.map": "/Rishi106/portfolio_website/static/js/main.8cc05e5b.js.map"
+    "main.ac259c5a.js.map": "/Rishi106/portfolio_website/static/js/main.ac259c5a.js.map"
   },
   "entrypoints": [
     "static/css/main.2c5e035d.css",
-    "static/js/main.8cc05e5b.js"
+    "static/js/main.ac259c5a.js"
   ]
 }
