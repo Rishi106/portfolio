@@ -1,35 +1,24 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
+import "./index.css"
 import { Route, Routes } from "react-router-dom";
-import Footer from "./component/Footer";
-
-// Lazy load routes for better performance
-const Home = lazy(() => import("./route/Home"));
-const About = lazy(() => import("./route/About"));
-const Project = lazy(() => import("./route/Project"));
-const Skills = lazy(() => import("./route/Skills"));
-const Education = lazy(() => import("./route/Education"));
-const Contact = lazy(() => import("./route/Contact"));
-
-// Layout Wrapper (optional)
-const Layout = ({ children }) => (
-  <>
-    {children}
-    <Footer />
-  </>
-);
-
-function App() {
+import Home from "./route/Home";
+import About from "./route/About";
+import Project from "./route/Project";
+import Skills from "./route/Skills";
+import Education from "./route/Education";
+import Contact from "./route/Contact";
+   function App() {
   return (
-    <Suspense fallback={<div className="text-center text-white">Loading...</div>}>
-      <Routes>
-        <Route path="/" element={<Layout><Home /></Layout>} />
-        <Route path="/about" element={<Layout><About /></Layout>} />
-        <Route path="/project" element={<Layout><Project /></Layout>} />
-        <Route path="/skills" element={<Layout><Skills /></Layout>} />
-        <Route path="/education" element={<Layout><Education /></Layout>} />
-        <Route path="/contact" element={<Layout><Contact /></Layout>} />
-      </Routes>
-    </Suspense>
+    <>
+    <Routes>
+     <Route path="/" element={<Home/>}/>
+     <Route path="/about" element={<About/>}/>
+    <Route path="/project" element={<Project/>}/>
+     <Route path="/skills" element={<Skills/>}/>
+    <Route path="/education" element={<Education/>}/>
+     <Route path="/contect" element={<Contact/>}/>
+    </Routes>
+   </>
   );
 }
 
