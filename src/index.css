@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Mobile-first styles */
+.home-container {
+  text-align: center;
+  padding: 20px;
+  perspective: 1000px; /* Adds perspective for 3D transformations */
+}
+
+.hero {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on mobile */
+  align-items: center;
+  padding: 20px 0; /* Reduced padding for mobile */
+}
+
+.hero-content {
+  max-width: 100%; /* Full width on mobile */
+  text-align: center; /* Center text on mobile */
+  padding: 0 20px; /* Add padding for better spacing */
+}
+
+.hero-content h1 {
+  font-size: 2rem; /* Smaller font size for mobile */
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateZ(20px);
+}
+
+.hero-content p {
+  font-size: 1rem; /* Smaller font size for mobile */
+  margin-bottom: 20px;
+  transform: translateZ(10px);
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateZ(15px);
+}
+
+.cta-button:hover {
+  transform: translateZ(20px) rotateX(10deg);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image {
+  width: 200px; /* Smaller image for mobile */
+  height: 200px;
+  border-radius: 50%;
+  background: rgb(99, 92, 92);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: rotateY(15deg) translateZ(30px);
+  margin-top: 20px; /* Add spacing between content and image */
+}
+
+.profile-image:hover {
+  transform: rotateY(20deg) translateZ(50px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.resume-section {
+  margin-top: 30px; /* Reduced margin for mobile */
+}
+
+.download-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateZ(15px);
+}
+
+.download-button:hover {
+  transform: translateZ(20px) rotateY(10deg);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row; /* Side-by-side layout on larger screens */
+    justify-content: space-between;
+    padding: 50px 0; /* Restore padding for larger screens */
+  }
+
+  .hero-content {
+    max-width: 600px; /* Restore max-width for larger screens */
+    text-align: left; /* Align text to the left on larger screens */
+  }
+
+  .hero-content h1 {
+    font-size: 3rem; /* Restore larger font size */
+  }
+
+  .hero-content p {
+    font-size: 1.2rem; /* Restore larger font size */
+  }
+
+  .profile-image {
+    width: 300px; /* Restore larger image size */
+    height: 300px;
+    margin-top: 0; /* Remove extra spacing */
+  }
+}

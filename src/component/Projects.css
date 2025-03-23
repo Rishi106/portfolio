@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.projects {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #121212;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden; /* Prevent overflow from animations */
+}
+
+.projects h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: fadeIn 1.5s ease-out; /* Add fade-in animation */
+}
+
+/* 🔹 Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* 🔹 3D Project Card */
+.project-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  position: relative;
+  transform-style: preserve-3d; /* Enable 3D transformations */
+}
+
+/* 🔹 Neon Glow Effect */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(106, 17, 203, 0.15) 10%, rgba(37, 117, 252, 0.15) 50%);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1; /* Ensure glow is behind the card */
+}
+
+/* 🔹 Hover Effect for 3D Floating Look */
+.project-card:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg); /* Add rotation for 3D effect */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* 🔹 Project Image */
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* 🔹 Image Hover Effect */
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* 🔹 Project Title */
+.project-card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 1rem;
+  transform: translateZ(20px); /* Add depth to title */
+}
+
+/* 🔹 Project Description */
+.project-card p {
+  font-size: 1rem;
+  color: #d0d0d0;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  text-align: justify;
+  max-height: 80px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  transform: translateZ(10px); /* Add depth to description */
+}
+
+/* 🔹 Expand Text Effect */
+.project-card.expanded p {
+  max-height: 500px;
+}
+
+/* 🔹 Read More Button */
+.read-more {
+  cursor: pointer;
+  color: #6a11cb;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  transform: translateZ(15px); /* Add depth to button */
+}
+
+.read-more:hover {
+  color: #2575fc;
+}
+
+/* 🔹 Tag Styles */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.tag {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transform: translateZ(10px); /* Add depth to tags */
+}
+
+/* 🔹 View Button */
+.view-button {
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateZ(15px); /* Add depth to button */
+}
+
+/* 🔹 Hover Effect for Button */
+.view-button:hover {
+  transform: scale(1.05) translateZ(20px); /* Add 3D effect on hover */
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.5);
+}
+
+/* 🔹 Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .projects h1 {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .view-button {
+    font-size: 0.9rem;
+  }
+}

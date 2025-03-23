@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.skills {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 1200px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Animated Background */
+.skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/diagmonds.png');
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Skills Filter Buttons */
+.skills-filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.skills-filter button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-filter button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.5);
+}
+
+.skills-filter button.active {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+/* Skills Grid */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.skills-category {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid rgba(106, 17, 203, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.skills-category:hover {
+  transform: translateY(-5px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skills-category h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #6a11cb;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.skill-name {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-name i {
+  font-size: 1.2rem;
+  color: #6a11cb;
+  transition: transform 0.3s ease;
+}
+
+.skill-name:hover i {
+  transform: rotate(15deg);
+}
+
+.skill-progress {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border-radius: 5px;
+  width: 0;
+  transition: width 1s ease;
+}
+
+.skill-percentage {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: right;
+}
+
+/* Tooltip for Skill Percentage */
+.skill-item:hover .skill-percentage {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  opacity: 0;
+  animation: fadeInTooltip 0.3s ease forwards;
+}
+
+@keyframes fadeInTooltip {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .skills {
+  background-color: #121212;
+}
+
+[data-theme="dark"] .skills h2 {
+  color: #fff;
+}
+
+[data-theme="dark"] .skills-category {
+  background-color: #1e1e1e;
+  border-color: rgba(106, 17, 203, 0.3);
+}
+
+[data-theme="dark"] .skill-name {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .skill-progress {
+  background-color: #333;
+}
+
+[data-theme="dark"] .skill-percentage {
+  color: #b0b0b0;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skills h2 {
+    font-size: 1.75rem;
+  }
+
+  .skills-category h3 {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,182 @@
+/* Educations.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.education {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: #27aa3d;
+  background: linear-gradient(135deg, #f9f9f9, #e9ecef); /* Gradient background */
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  animation: float 6s ease-in-out infinite; /* Floating effect */
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.education h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: rgb(35, 132, 150);
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient text */
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.education-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.education-item,
+.languages-interests {
+  flex: 1;
+  background: #ffffff; /* White background */
+  padding: 1.5rem;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-color: #6a11cb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d; /* Enable 3D transformations */
+}
+
+.education-item::before,
+.languages-interests::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.education-item:hover,
+.languages-interests:hover {
+  transform: translateY(-5px) rotateX(5deg) rotateY(5deg); /* 3D hover effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.education-item:hover::before,
+.languages-interests:hover::before {
+  opacity: 0.1; /* Gradient overlay on hover */
+}
+
+.education-item h3,
+.languages-interests h3 {
+  font-size: 1.5rem;
+  color: #2c3e50; /* Dark blue for subheading */
+  margin-bottom: 0.5rem;
+}
+
+.education-item p {
+  font-size: 1rem;
+  color: #666; /* Dark gray for text */
+  margin: 0.25rem 0;
+}
+
+.languages-interests h3 {
+  color: #2575fc; /* Blue for subheading */
+  margin-bottom: 1rem;
+}
+
+.languages h4,
+.interests h4 {
+  font-size: 1.25rem;
+  color: #2c3e50; /* Dark blue for sub-subheading */
+  margin-bottom: 0.75rem;
+}
+
+.languages ul,
+.interests ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.languages ul li,
+.interests ul li {
+  font-size: 1rem;
+  color: #666; /* Dark gray for text */
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.languages ul li::before,
+.interests ul li::before {
+  content: '•';
+  color: #2575fc; /* Blue for bullet points */
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -0.25rem;
+}
+
+.languages ul li strong {
+  color: #2c3e50; /* Dark blue for emphasis */
+}
+
+/* Icon Styling */
+.education h2 svg,
+.languages-interests h3 svg {
+  margin-right: 10px; /* Space between icon and text */
+  vertical-align: middle; /* Align icons with text */
+  color: #2575fc; /* Icon color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education-container {
+    flex-direction: column;
+  }
+
+  .education-item,
+  .languages-interests {
+    width: 100%;
+  }
+
+  .education h2 {
+    font-size: 1.75rem;
+  }
+
+  .education-item h3,
+  .languages-interests h3 {
+    font-size: 1.25rem;
+  }
+
+  .education-item p,
+  .languages ul li,
+  .interests ul li {
+    font-size: 0.9rem;
+  }
+}

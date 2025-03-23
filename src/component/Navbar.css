@@ -1,0 +1,119 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1000;
+}
+
+/* Navbar Logo */
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ecf0f1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-logo:hover {
+  color: #00ffea;
+  text-shadow: 0 0 10px #00ffea;
+  cursor: pointer;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+}
+
+/* 3D Neon Glow Hover Effect */
+.navbar-links a:hover {
+  background: #00ffea;
+  color: #101010;
+  box-shadow: 0 0 15px #00ffea, 0 0 30px #00ffea;
+  transform: scale(1.1);
+}
+
+/* Navbar Toggle Button */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.navbar-toggle .bar {
+  width: 30px;
+  height: 4px;
+  background: #ecf0f1;
+  margin: 5px 0;
+  transition: 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+/* Animated Toggle */
+.navbar-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Responsive Mobile Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(44, 62, 80, 0.95);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 10px 10px;
+    transform: translateY(-100%);
+    transition: 0.4s ease-in-out;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .navbar-links a {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}

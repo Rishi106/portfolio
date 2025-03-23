@@ -1,0 +1,85 @@
+/* Footer.css */
+.footer {
+    background: #2c3e50; /* Dark background */
+    color: white;
+    padding: 2rem 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .footer h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #2575fc; /* Blue for headings */
+  }
+  
+  .social-media .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-media .icon {
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .social-media .icon:hover {
+    color: #2575fc; /* Blue on hover */
+  }
+  
+  .quick-links ul,
+  .contact-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .quick-links ul li,
+  .contact-info ul li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .quick-links ul li a,
+  .contact-info ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .quick-links ul li a:hover,
+  .contact-info ul li a:hover {
+    color: #2575fc; /* Blue on hover */
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #34495e; /* Darker border */
+  }
+  
+  .copyright p {
+    font-size: 0.9rem;
+    color: #b0b0b0; /* Light gray for text */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .social-media .social-icons {
+      justify-content: center;
+    }
+  }
